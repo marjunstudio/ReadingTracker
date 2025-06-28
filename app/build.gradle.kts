@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.readingtracker"
+    namespace = "com.example.readingtracker"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.readingtracker"
+        applicationId = "com.example.readingtracker"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
