@@ -1,0 +1,10 @@
+# This is a sample local.properties file
+# Copy this file to local.properties and add your API keys
+
+# Google Books API Key
+# Get your API key from: https://console.cloud.google.com/
+# Enable "Books API" and create credentials
+GOOGLE_BOOKS_API_KEY=YOUR_API_KEY_HERE
+
+# SDK location (auto-generated - do not modify)
+sdk.dir=/path/to/your/Android/Sdk
