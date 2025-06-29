@@ -37,7 +37,7 @@ fun AppTopBar(
             }
         },
         actions = actions,
-        windowInsets = WindowInsets.systemBars.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Top),
+        windowInsets = WindowInsets.systemBars.only(WindowInsetsSides.Horizontal),
         colors = TopAppBarDefaults.topAppBarColors()
     )
 }
