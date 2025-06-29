@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.readingtracker.data.model.PurposeCategory
+import com.example.readingtracker.ui.components.AppTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -28,13 +29,10 @@ fun PurposeSettingScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("読書目的の設定") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "読書目的の設定",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->

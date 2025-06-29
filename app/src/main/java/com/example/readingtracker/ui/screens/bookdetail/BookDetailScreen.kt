@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
+import com.example.readingtracker.ui.components.AppTopBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,13 +41,10 @@ fun BookDetailScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("書籍詳細") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "書籍詳細",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->
