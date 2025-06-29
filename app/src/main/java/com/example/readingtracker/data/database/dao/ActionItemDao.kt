@@ -13,6 +13,9 @@ interface ActionItemDao {
     @Query("SELECT COUNT(*) FROM action_items WHERE book_id = :bookId")
     suspend fun getActionItemCount(bookId: String): Int
     
+    @Query("SELECT COUNT(*) FROM action_items WHERE book_id = :bookId")
+    suspend fun getActionItemCountByBookId(bookId: String): Int
+    
     @Insert
     suspend fun insert(actionItem: ActionItem)
     

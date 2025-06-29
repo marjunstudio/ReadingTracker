@@ -37,6 +37,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -92,6 +93,9 @@ dependencies {
     implementation("androidx.camera:camera-camera2:1.3.3")
     implementation("androidx.camera:camera-lifecycle:1.3.3")
     implementation("androidx.camera:camera-view:1.3.3")
+    
+    // 権限管理
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
 
     // 日付処理
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
@@ -101,6 +105,9 @@ dependencies {
 
     // Core Android
     implementation("androidx.core:core-ktx:1.13.1")
+    
+    // Java 8+ time API for Android API level < 26
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 
     // テスト
     testImplementation("junit:junit:4.13.2")

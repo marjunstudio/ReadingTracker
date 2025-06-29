@@ -7,7 +7,12 @@
       "Bash(git push:*)",
       "Bash(gh pr create:*)",
       "Bash(find:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(./gradlew:*)",
+      "Bash(java:*)",
+      "Bash(ls:*)",
+      "Bash(export JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\")",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }
