@@ -40,4 +40,7 @@ interface BookDao {
     
     @Query("SELECT COUNT(*) FROM books")
     suspend fun getTotalBookCount(): Int
+    
+    @Query("SELECT * FROM books WHERE status = 'COMPLETED' AND completed_at BETWEEN :startDate AND :endDate ORDER BY completed_at DESC")
+    suspend fun getCompletedBooksInPeriod(startDate: Long, endDate: Long): List<Book>
 }

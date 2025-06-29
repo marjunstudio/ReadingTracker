@@ -16,6 +16,9 @@ interface MemoDao {
     @Query("SELECT COUNT(*) FROM memos WHERE book_id = :bookId")
     suspend fun getMemoCount(bookId: String): Int
     
+    @Query("SELECT COUNT(*) FROM memos WHERE book_id = :bookId")
+    suspend fun getMemoCountByBookId(bookId: String): Int
+    
     @Insert
     suspend fun insert(memo: Memo)
     

@@ -197,3 +197,6 @@ baseline-prof.txt
 
 # Detekt
 **/detekt/
+
+# Claud Code
+**/claude/
