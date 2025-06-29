@@ -32,6 +32,8 @@ out/
 build/
 gradle-app.setting
 !gradle-wrapper.jar
+*.bin
+*.lock
 
 # Local configuration file (sdk path, etc)
 local.properties
