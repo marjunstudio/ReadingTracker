@@ -11,6 +11,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.readingtracker.ui.components.AppTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,13 +35,10 @@ fun MemoAddScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("メモを追加") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "メモを追加",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->

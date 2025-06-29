@@ -7,6 +7,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.*
+import com.example.readingtracker.ui.components.AppTopBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,8 +27,8 @@ fun StatisticsScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("統計") }
+            AppTopBar(
+                title = "統計"
             )
         }
     ) { paddingValues ->

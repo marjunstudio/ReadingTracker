@@ -7,6 +7,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
+import com.example.readingtracker.ui.components.AppTopBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,8 +29,8 @@ fun HomeScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("Reading Tracker") },
+            AppTopBar(
+                title = "Reading Tracker",
                 actions = {
                     IconButton(onClick = { /* TODO: 検索実装 */ }) {
                         Icon(Icons.Default.Search, contentDescription = "検索")

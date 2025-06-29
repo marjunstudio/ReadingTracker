@@ -11,6 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.readingtracker.ui.components.AppTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,13 +36,10 @@ fun ActionItemCreateScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("実践項目を作成") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "実践項目を作成",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->

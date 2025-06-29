@@ -16,6 +16,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.readingtracker.data.model.BookInfo
+import com.example.readingtracker.ui.components.AppTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,13 +28,10 @@ fun BookConfirmationScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("書籍情報の確認") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "書籍情報の確認",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->

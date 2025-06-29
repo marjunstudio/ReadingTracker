@@ -12,6 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.readingtracker.ui.navigation.Routes
+import com.example.readingtracker.ui.components.AppTopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -20,13 +21,10 @@ fun BookRegistrationMethodScreen(
 ) {
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("書籍を登録") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "戻る")
-                    }
-                }
+            AppTopBar(
+                title = "書籍を登録",
+                navController = navController,
+                showBackButton = true
             )
         }
     ) { paddingValues ->
