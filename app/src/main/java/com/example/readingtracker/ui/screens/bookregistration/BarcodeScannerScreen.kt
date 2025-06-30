@@ -7,6 +7,8 @@ import androidx.camera.view.PreviewView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -139,6 +141,20 @@ private fun BarcodeScannerContent(
                 .fillMaxSize()
                 .background(Color.Black.copy(alpha = 0.3f))
         ) {
+            // 左上の戻るボタン
+            IconButton(
+                onClick = { navController.popBackStack() },
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(16.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "戻る",
+                    tint = Color.White
+                )
+            }
+            
             Box(
                 modifier = Modifier
                     .size(250.dp)
